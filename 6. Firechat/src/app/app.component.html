@@ -1,0 +1,13 @@
+<div class="container main-container">
+  <h1> FireChats </h1>
+  <hr>
+
+  <div class="row justify-content-center">
+    <div *ngIf="!_chatService.usuario " class="col-6">
+      <app-login> </app-login>
+    </div>
+    <div *ngIf="_chatService.usuario " id="chat-window" class="chat-window">
+      <app-chat></app-chat>
+    </div>
+  </div>
+</div>

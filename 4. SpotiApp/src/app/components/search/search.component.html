@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-9">
+      <label for="termino">Buscar artista: <small>{{ termino }}</small></label>
+      <input [(ngModel)] = "termino"
+        (keyup)="buscarArtista()"
+        type="text" name="termino"
+        class="form-control"
+        placeholder="Artista...">
+        <hr>
+    </div>
+    <div class="col-md-12 card-columns">
+      <div class="puntero card"
+      [routerLink]="['/artista',artista.id]"
+      *ngFor="let artista of _spotifyService.artistas">
+        <img class="card-img-top img-fluid" [src]="artista.images | sinfoto:0" alt="artista.name">
+        <div class="card-block">
+          <h4 class="card-title">{{ artista.name }}</h4>
+          <p class="card-text">{{ artista.genres[0] }}</p>
+        </div>
+      </div>
+    </div>

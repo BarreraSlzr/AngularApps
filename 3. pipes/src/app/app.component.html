@@ -1,0 +1,58 @@
+<div class="container">
+  <br>
+  <h1>Pipes</h1>
+  <hr>
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Variable</th>
+        <th>Pipe</th>
+        <th>Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> Uppercase </td>
+        <td> {{ nombre | uppercase}}</td>
+      </tr>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> Lowercase </td>
+        <td> {{ nombre | lowercase}}</td>
+      </tr>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> slice:3 </td>
+        <td> {{ nombre | slice:3}}</td>
+      </tr>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> slice:0:3 </td>
+        <td> {{ nombre | slice:0:3}}</td>
+      </tr>
+      <tr>
+        <td> {{ array }}</td>
+        <td> slice:0:3 </td>
+        <td> {{ array | slice:1:5}}</td>
+      </tr>
+      <tr>
+        <td> {{ PI }}</td>
+        <td> number </td>
+        <td> {{ PI | number:'3.0-0'}}</td>
+      </tr>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> capitalizado </td>
+        <td> {{ nombre | capitalizado:false }}</td>
+      </tr>
+      <tr>
+        <td> {{ contrasena }}</td>
+        <td> Mostrar: {{ activar }} <br>
+          <button type="button" class="btn btn-outline-primary btn-block" (click) = " activar = !activar " >Mostrar contraseña</button>
+        </td>
+        <td> {{ contrasena | contrasena:activar }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

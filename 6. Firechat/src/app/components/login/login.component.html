@@ -1,0 +1,11 @@
+<div class="text-center">
+  <p>Ingresa para comenzar a chatear</p>
+  <h1>Inicia Sesion</h1>
+  <button
+          *ngFor="let provedor of _chatService.provedores"
+          (click)="login(provedor)"
+          type="button"
+          class="btn btn-outline-primary btn-block">
+    {{ provedor }}
+  </button>
+</div>
